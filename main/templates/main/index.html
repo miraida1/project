@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1 style="color: deepskyblue;font-size: 40px;" >Добро пожаловать в наш интернет магазин книг</h1>
+{% for el in tasks %}
+    <div>
+        <h3 style="" >{{ el.title }}</h3>
+        <p style="" >{{ el.description }}</p>
+    </div>
+    <img src="{{ el.image.url }}" alt="" style="width:250px; height:250px'
+ margin: 10px;border: 2px solid #ccc;float: left;width: 100px;border: 1px solid #777;width: 30%;height: auto;}"/>
+    {% endfor %}
+{% endblock %}

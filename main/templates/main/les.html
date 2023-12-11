@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block name %}
+Книги
+{% endblock %}
+
+{% block content %}
+{% for re in book %}
+    <div>
+        <h3 style="..." >{{ re.name }}</h3>
+        <p style="..." >{{ re.description }}</p>
+        <h2 style="..." >{{ re.price }}</h2>
+    </div>
+    <img src="{{ el.image.url }}" alt="" style="width:250px; height:250px'"/>
+    {% endfor %}
+{% endblock %}
